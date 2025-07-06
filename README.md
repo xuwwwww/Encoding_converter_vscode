@@ -24,29 +24,34 @@ Currently supports these encodings (should be enough):
 ## Installation
 
 ### Manual Installation
-1. Download the `.vsix` file under `release` directory
-2.1. In VS Code press `Ctrl+Shift+P`
-3.1. Type "Extensions: Install from VSIX"
-4.1. Select the downloaded file
 
-2.2  In VS Code press `Ctrl+Shift+X` or select extention bar after pressing `Ctrl+B`
-3.2  Drag `.vsix` file into it
+1. Download the `.vsix` file under `release` directory
+2. In VS Code press `Ctrl+Shift+P`
+3. Type "Extensions: Install from VSIX"
+4. Select the downloaded file
+---
+1. Download the `.vsix` file under `release` directory
+2. In VS Code press `Ctrl+Shift+X` or select extention bar after pressing `Ctrl+B`
+3. Drag `.vsix` file into it
 
 
 ## How to Use?
 
 ### Single File Conversion
+
 1. Right-click on a file
 2. Select "Convert to UTF-8" (auto-detect) or "Convert between encodings" (manual selection)
 3. Done! File will automatically reopen
 
 ### Batch Conversion
+
 1. Right-click on a folder, or select multiple files
 2. Select "Batch Convert to UTF-8" or "Batch Convert between encodings"
 3. Confirm the list of files to process
 4. Wait for processing to complete
 
 ### Settings Adjustment
+
 Search for "Encoding Converter" in settings to adjust:
 - Whether to automatically backup
 - Batch processing concurrency
