@@ -1,0 +1,138 @@
+{
+  "name": "encoding-converter",
+  "displayName": "Encoding Converter",
+  "description": "Auto-detect and convert file encoding to UTF-8 with error tolerance",
+  "version": "0.1.0",
+  "publisher": "LouisXuwwww",
+  "author": {
+    "name": "LouisXuwwww",
+    "email": "abcdbrian67@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/xuwwwww/Encoding_converter_vscode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xuwwwww/Encoding_converter_vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xuwwwww/Encoding_converter_vscode/issues"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.convertToUTF8",
+        "title": "Convert to UTF-8 (Auto-detect encoding)"
+      },
+      {
+        "command": "extension.convertBetweenEncodings",
+        "title": "Convert between encodings (Select source & target)"
+      },
+      {
+        "command": "extension.batchConvertToUTF8",
+        "title": "Batch Convert to UTF-8 (Auto-detect encoding)"
+      },
+      {
+        "command": "extension.batchConvertBetweenEncodings",
+        "title": "Batch Convert between encodings (Select source & target)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.convertToUTF8",
+          "when": "resourceExtname && !explorerResourceIsFolder",
+          "group": "encoding"
+        },
+        {
+          "command": "extension.convertBetweenEncodings",
+          "when": "resourceExtname && !explorerResourceIsFolder",
+          "group": "encoding"
+        },
+        {
+          "command": "extension.batchConvertToUTF8",
+          "when": "explorerResourceIsFolder || listMultiSelection",
+          "group": "encoding"
+        },
+        {
+          "command": "extension.batchConvertBetweenEncodings",
+          "when": "explorerResourceIsFolder || listMultiSelection",
+          "group": "encoding"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "extension.convertToUTF8",
+          "when": "editorFocus",
+          "group": "encoding"
+        },
+        {
+          "command": "extension.convertBetweenEncodings",
+          "when": "editorFocus",
+          "group": "encoding"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Encoding Converter",
+      "properties": {
+
+        "encodingConverter.batchConcurrency": {
+          "type": "number",
+          "default": 5,
+          "description": "Maximum concurrent file processing during batch operations"
+        },
+        "encodingConverter.createBackup": {
+          "type": "boolean",
+          "default": true,
+          "description": "Create backup files (.bak) before conversion"
+        },
+        "encodingConverter.showDetailedResults": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show detailed conversion results and statistics"
+        },
+        "encodingConverter.excludePatterns": {
+          "type": "array",
+          "default": ["*.exe", "*.dll", "*.so", "*.dylib", "*.bin", "*.pdf", "*.jpg", "*.png", "*.gif", "*.zip", "*.tar", "*.gz"],
+          "description": "File patterns to exclude from batch conversion"
+        },
+        "encodingConverter.autoReopenFiles": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically reopen files with new encoding after conversion (single file conversion only)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.6.3",
+    "jschardet": "^3.0.0",
+    "detect-file-encoding-and-language": "^2.0.2"
+  }
+} 

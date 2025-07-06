@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+out/
+
+# Package files
+*.vsix
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# VS Code personal settings (keep public settings)
+.vscode/settings.json
+
+# Test output
+coverage/
+
+# Environment files (if any)
+.env
+.env.local 
