@@ -4,8 +4,9 @@ node_modules/
 # Build output
 out/
 
-# Package files
-*.vsix
+# Redundant documents created by AI
+CHANGELOG.md
+CONTRIBUTING.md
 
 # System files
 .DS_Store
@@ -19,12 +20,12 @@ npm-debug.log*
 *.tmp
 *.temp
 
-# VS Code personal settings (keep public settings)
+# VS Code personal settings
 .vscode/settings.json
 
 # Test output
 coverage/
 
-# Environment files (if any)
+# Environment files
 .env
 .env.local 
