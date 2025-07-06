@@ -96,22 +96,22 @@ Hope this little tool can help everyone! Feel free to give feedback if you have 
 
 ---
 
-## 中文說明 (Chinese Description)
+## ���廡�� (Chinese Description)
 
-### 這是什麼？
+### �o�O����H
 
-這是我寫的一個VS Code編碼轉換擴展，主要解決工作中常遇到的編碼問題。支援自動檢測和轉換各種編碼，特別是Big5和UTF-8之間的轉換。
+�o�O�ڼg���@��VS Code�s�X�ഫ�X�i�A�D�n�ѨM�u�@���`�J�쪺�s�X���D�C�䴩�۰��˴��M�ഫ�U�ؽs�X�A�S�O�OBig5�MUTF-8�������ഫ�C
 
-### 主要功能
-- 自動檢測檔案編碼
-- 單檔案和批量轉換  
-- 還原功能
-- 自動備份保護
+### �D�n�\��
+- �۰��˴��ɮ׽s�X
+- ���ɮשM��q�ഫ  
+- �٭�\��
+- �۰ʳƥ��O�@
 
-### 使用方法
-在檔案或資料夾上右鍵，選擇對應的轉換選項即可。
+### �ϥΤ�k
+�b�ɮשθ�Ƨ��W�k��A��ܹ������ഫ�ﶵ�Y�i�C
 
-### 支援編碼
-UTF-8, UTF-16, Big5, GBK, GB2312, Shift_JIS, EUC-KR, ISO-8859-1, Windows-1252等。
+### �䴩�s�X
+UTF-8, UTF-16, Big5, GBK, GB2312, Shift_JIS, EUC-KR, ISO-8859-1, Windows-1252���C
 
-有問題歡迎回饋！ 
+�����D�w��^�X�I 
